@@ -1,0 +1,137 @@
+.footer {
+    padding: 2rem 0;
+    background: black;
+}
+
+.footer h1,
+.footer h2,
+.footer a {
+    color: #FFF;  
+}
+
+.footer h1 {
+    font-size: 16px;
+    font-weight: 600;
+
+    margin-bottom: 1.5rem;
+}
+
+.footer a {
+    line-height: 1.1rem;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.footer-row-one {
+    display: flex;
+    justify-content: center;
+}
+
+.institutional,
+.help,
+.user-account,
+.contact-us,
+.social-media,
+.tng-card {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1.5rem;
+}
+
+.contact-us {
+    width: 200px;
+}
+
+.contact-us span{
+    width: 180px;
+    font-size: 18px;
+    font-weight: lighter;
+    outline: none;
+    text-align: center;
+
+    color: white;
+    background: black;
+
+    border: 1px solid #fff;
+    padding: .6rem;
+    margin-bottom: .5rem;
+}
+
+.contact-us p {
+    color: #fff;
+    width: 180px;
+    font-size: 14px;
+    line-height: 1.1rem;
+}
+
+.social-media {
+    align-items: center;
+}
+
+.social-media i{
+    color: #fff;
+
+    font-size: 30px;
+    padding: 1rem;
+
+    cursor: pointer;
+}
+
+.tng-card h2 {
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-bottom: 1.5rem;
+}
+
+.tng-card img {
+    max-width: 100%;
+}
+
+.tng-card button {
+    cursor: pointer;
+    color: white;
+    background: black;
+
+    border: 2px solid #fff;
+    padding: .8rem;
+    font-weight: bold;
+}
+
+
+/* FOOTER ROW TWO */
+.footer-row-two {
+    display: flex;
+    flex-direction: column;
+    width: 64%;
+    margin: 0 auto;
+}
+
+.credit-cards img {
+    margin-right: 10px;
+}
+
+.logos {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.extra {
+    cursor: pointer;
+}
+
+.wigo {
+    width: 60px;
+    filter: grayscale(1);
+}
+
+.rights {
+    display: flex;
+    justify-content: center;
+    padding: .5rem 0;
+}
+
+.rights p {
+    font-size: 12px;
+}
