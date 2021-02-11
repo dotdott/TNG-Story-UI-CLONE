@@ -8,7 +8,7 @@ body {
     font-family: sans-serif;
     min-width: 100vw;
     min-height: 100vh;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 /* GLOBALS */
@@ -87,10 +87,12 @@ svg {
     fill: white;
 }
 /* END LOGO */
-
 .row-two {
-    position: absolute;
+    position: sticky;
+    top: 0;
+
     width: 100vw;
+    height: 90px;
 
     display: flex;
     justify-content: center;
@@ -101,25 +103,140 @@ svg {
     color: white;
 }
 
+.row-two .fa-bars {
+    display: none;
+}
+
+.row-two a {
+    height: 90px;
+}
+
+.row-two .options {
+    position: relative;
+    text-align: center;
+}
+
+.row-two .options .hidden {
+    display: none;
+    height: 35px;
+}
+
 .row-two:hover {
-    background: white;
-    color: black;
+    background: #fff !important;
+    color: black !important;
 
     transition: all .5s ease-in-out;
 }
 
+.row-two .options:hover {
+    position: relative;
+    top: 35px;
+    background: #222 !important;
+}
+
+.row-two .options:nth-child(4):hover {
+    position: relative;
+    top: 140px;
+}
+.row-two .options:nth-child(5):hover {
+    position: relative;
+    top: 190px;
+}
+
+.row-two .options:hover a:first-child {
+    padding-top: 2.5rem;
+}
+
+.row-two .options:hover .hidden,
+.row-two .options:hover a  {
+    display: block;
+    color: #fff !important;
+    padding-top: .5rem;
+}
+
+.row-two .options .hidden:hover {
+    background: #000 !important;
+}
+
+
 .row-two:hover a {
-    color: black;
+    color: black !important;
+    font-weight: 700;
 }
 
 .row-two:hover svg {
-    fill: black;
+    fill: black !important;
 }
 
 .row-two:hover .cls-2-mask {
-    fill: black;
+    fill: black !important;
 }
 
+.row-two:hover i:hover,
+.row-two:hover small:last-child:hover {
+    opacity: .5;
+}
+
+/* MODAL  */
+.modal {
+    display: none;
+    z-index: 1;
+
+    outline: none;
+    position: fixed;
+    top: 0;
+
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+}
+
+.modal .close-btn {
+    width: 100%;
+    padding: 1rem;
+    font-weight: bold;
+
+    border: none;
+
+    background: #222;
+    color: rgb(221, 221, 221);
+}
+
+.modal p {
+    padding: 1rem 1rem;
+    font-size: 20px;
+    font-weight: 400;
+    
+    border-bottom: 1px solid rgb(177, 177, 177);
+    color: #111;
+}
+
+.modal-button-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .5rem;
+
+    margin: 1rem auto;
+    width: 95%;
+    height: 200px;
+}
+
+.modal-button-section button {
+    outline: none;
+    color: #111;
+    font-weight: bold;
+    font-size: 14px;
+    border: 1px solid rgb(177, 177, 177);
+}
+
+.modal-button-section button:last-child {
+    grid-column: span 2;
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+/* COLUMN TWO */
 .column-two {
     width: 40%;
     display: flex;
@@ -129,15 +246,15 @@ svg {
 
 .column-two a{
     width: 100px;
-    height: 80px;
     
-    font-weight: 700;
+    font-weight: 800;
 
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/* COLUMN THREE */
 .column-three {
     display: flex;
 }
@@ -185,11 +302,13 @@ svg {
     cursor: pointer;
 }
 
+
+/* GALLERY */
 .slide-gallery {
     display: flex;
     z-index: 1;
     position: relative;
-    top: 4%;
+    top: -90px;
 }
 
 .slide-gallery img {
@@ -208,14 +327,4 @@ svg {
 }
 .slide-gallery .fa-arrow-left {
     left: 2%;
-}
-
-@media screen and (max-width: 1250px) {
-    .row-one {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width 768px){
-    
 }

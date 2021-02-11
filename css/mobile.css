@@ -1,0 +1,231 @@
+@media screen and (max-width: 1250px) {
+    .row-one {
+        width: 100%;
+    }
+
+    .row-two {
+        justify-content: space-between;
+    }
+
+    .column-three {
+        width: 400px;
+    }
+
+    .footer .institutional {
+        margin-left: 1rem;
+    }
+}
+
+@media screen and (max-width: 1050px){
+    .row-one {
+        justify-content: space-around;
+    }
+
+    .row-one p,
+    .row-one a {
+        padding: .8rem 0;
+        border: none;
+        font-size: 10px;
+    }
+
+    .row-one p:first-child,
+    .row-one i:first-child,
+    .first {
+        color: white !important;
+    }
+
+    .row-one p:last-child,
+    .row-one p:nth-child(4) {
+        display: none;
+    }
+
+    /* ROW TWO */
+    .row-two {
+        background: #fff;
+        color: black;
+    }
+
+    .row-two .fa-bars {
+        display: block;
+
+        margin-left: 1rem;
+        font-size: 24px;
+    }
+
+    .row-two .tng-logo {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .row-two svg {
+        width: 50px;
+        fill: black;
+    }
+
+    .row-two .cls-2-mask {
+        fill: black;
+    }
+
+    .row-two .topics {
+       display: none;
+    }
+
+    .column-three .icons .fa-user {
+        display: none;
+    }
+
+    /* FOOTER STYLES */
+    .footer h1 {
+        margin-bottom: -1.5rem !important;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-row-one a,
+    .footer-row-one span,
+    .footer-row-one p,
+    .footer-row-one i {
+        display: none;
+        line-height: 1.5rem;
+    }
+
+    .footer-row-one a:last-child,
+    .footer-row-one span:last-child,
+    .footer-row-one p:last-child,
+    .footer-row-one i:last-child {
+        margin-bottom: 1rem;
+        /* margin: 0rem .5rem 1rem 0; */
+    }
+
+    .footer h1 span i,
+    .footer h1 span  {
+        display: block !important;
+    }
+
+
+    .footer-row-one {
+        flex-direction: column;
+    }
+
+    .institutional,
+    .help,
+    .user-account,
+    .contact-us,
+    .social-media,
+    .tng-card {
+        width: 95%;
+        margin: 1rem 0 0 1rem;
+        border-bottom: 1px solid #fff;
+    }
+
+    .contact-us {
+        width: 95% !important;
+    }
+
+    .social-media {
+        align-items: start !important;
+    }
+
+    .social-media h1 {
+        width: 100% !important;
+    }
+
+    .social-icons {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .social-media .social-icons i {
+        font-size: 38px;
+    }
+
+    .tng-card {
+        padding-bottom: .5rem;
+    }
+
+    .tng-card img {
+        width: 200px;
+    }
+
+    /* FOOTER ROW TWO */
+    .footer-row-two {
+        margin: 1rem 0 0 1rem !important;
+    }
+    .footer-row-two .logos {
+        flex-direction: column;
+    }
+
+    .whats-app {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .slide-gallery img {
+        height: 80vh;
+    }
+
+    .section-display img {
+        height: 35vh;
+    }
+} 
+
+@media screen and (max-width: 600px) {
+    .row-one {
+        background: #f00;
+    }
+
+    .row-one p:first-child {
+        width: 100%;
+        color: #fff;
+
+        text-align: start;
+        text-transform: uppercase;
+        margin-left: 1rem;
+
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .row-one p:first-child a {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .row-one p:nth-child(2),
+    .row-one p:nth-child(3) {
+        display: none;
+    }
+
+    .column-three {
+        width: auto;
+        margin-right: .5rem;
+    }
+
+    .column-three small {
+        font-size: 11px;
+    }
+    .column-three .prices small:last-child {
+        margin: .5rem 0 0 0;
+        padding: .2rem;
+
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 8px;
+
+        background: #111;
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .column-three .icons {
+        margin-right: 1rem;
+    }
+
+    .column-three .icons i {
+        padding: 0 .3rem;
+    }
+}
