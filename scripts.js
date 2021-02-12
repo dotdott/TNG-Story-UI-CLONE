@@ -89,39 +89,56 @@ function menuModal() {
 };
 menuModal();
 
+
+const divs = document.querySelectorAll('.footer-row-one div');
 function displayFooterContent() {
-    const institutional = document.querySelector('.institutional');    
-        institutional.addEventListener('click', () => displayContent('institutional'));     
-
-    const help = document.querySelector('.help');
-        help.addEventListener('click', () => displayContent('help'));
-
-    const account = document.querySelector('.user-account');
-        account.addEventListener('click', () => displayContent('user-account'));
-
-    const contact = document.querySelector('.contact-us');
-        contact.addEventListener('click', () => displayContent('contact-us'));
-
-    const social = document.querySelector('.social-media');
-        social.addEventListener('click', () => displayContent('social-media'));
-}
+    divs.forEach(div => div.addEventListener('click', () => {
+            displayContent(div);
+    })
+)};
 displayFooterContent();
 
+
 function displayContent(div){
-    const contents = document.querySelectorAll(`.${div} a`);
+    if(!div.classList.contains('active')){
+        const contents = document.querySelectorAll(`.${div.className} a`);
         
+        contents.forEach(content => {
+            content.style.display = 'block';
+        });
+        
+        if(div.className === 'contact-us') {
+            document.querySelector('.contact-us p').style.display = 'block';
+            document.querySelector('.contact-us .tel').style.display = 'block';
+        };
+        if (div.className === 'social-media'){
+            const icons = document.querySelectorAll('.footer-row-one i')
+            icons.forEach(icon => {
+                icon.style.display = 'block';
+            });
+        };
+        div.classList.add('active');
+    } else {
+        div.classList.remove('active');
+        removeContent(div);
+    }
+};
+
+function removeContent(div) {
+    const contents = document.querySelectorAll(`.${div.className} a`);
+            
     contents.forEach(content => {
-        content.style.display = 'block';
+        content.style.display = 'none';
     });
 
-    if(div === 'contact-us') {
-        document.querySelector('.contact-us p').style.display = 'block';
-        document.querySelector('.contact-us .tel').style.display = 'block';
+    if(div.className === 'contact-us') {
+        document.querySelector('.contact-us p').style.display = 'none';
+        document.querySelector('.contact-us .tel').style.display = 'none';
     };
-    if (div === 'social-media'){
-       const icons = document.querySelectorAll('.footer-row-one i')
+    if (div.className === 'social-media'){
+    const icons = document.querySelectorAll('.footer-row-one i')
         icons.forEach(icon => {
-            icon.style.display = 'block';
+            icon.style.display = 'none';
         });
     };
 };
